@@ -10,13 +10,6 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //self.navigationController?.popToRootViewControllerAnimated(false)
-
-    }
-    
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         var destinantion = segue.destinationViewController as UIViewController
