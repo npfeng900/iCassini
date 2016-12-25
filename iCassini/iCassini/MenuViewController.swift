@@ -8,7 +8,16 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, UISplitViewControllerDelegate {
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.splitViewController!.delegate = self
+    }
+    // 控制splitView的collapsed
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        return true
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
