@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		6D02ECF11E0EC7A300648A0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02ECF01E0EC7A300648A0A /* AppDelegate.swift */; };
-		6D02ECF31E0EC7A300648A0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02ECF21E0EC7A300648A0A /* ViewController.swift */; };
+		6D02ECF31E0EC7A300648A0A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D02ECF21E0EC7A300648A0A /* MenuViewController.swift */; };
 		6D02ECF61E0EC7A300648A0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D02ECF41E0EC7A300648A0A /* Main.storyboard */; };
 		6D02ECF81E0EC7A300648A0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D02ECF71E0EC7A300648A0A /* Assets.xcassets */; };
 		6D02ECFB1E0EC7A300648A0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D02ECF91E0EC7A300648A0A /* LaunchScreen.storyboard */; };
+		6DAE92461E0F75EA0021DEF6 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAE92451E0F75EA0021DEF6 /* ImageViewController.swift */; };
+		6DAE92481E0F7A420021DEF6 /* DemoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAE92471E0F7A420021DEF6 /* DemoURL.swift */; };
+		6DAE924C1E0F80610021DEF6 /* Nankai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6DAE924B1E0F80610021DEF6 /* Nankai.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6D02ECED1E0EC7A300648A0A /* iCassini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCassini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D02ECF01E0EC7A300648A0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6D02ECF21E0EC7A300648A0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D02ECF21E0EC7A300648A0A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		6D02ECF51E0EC7A300648A0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D02ECF71E0EC7A300648A0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D02ECFA1E0EC7A300648A0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D02ECFC1E0EC7A300648A0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DAE92451E0F75EA0021DEF6 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		6DAE92471E0F7A420021DEF6 /* DemoURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoURL.swift; sourceTree = "<group>"; };
+		6DAE924B1E0F80610021DEF6 /* Nankai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Nankai.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +60,11 @@
 		6D02ECEF1E0EC7A300648A0A /* iCassini */ = {
 			isa = PBXGroup;
 			children = (
+				6DAE924B1E0F80610021DEF6 /* Nankai.jpg */,
 				6D02ECF01E0EC7A300648A0A /* AppDelegate.swift */,
-				6D02ECF21E0EC7A300648A0A /* ViewController.swift */,
+				6DAE92471E0F7A420021DEF6 /* DemoURL.swift */,
+				6D02ECF21E0EC7A300648A0A /* MenuViewController.swift */,
+				6DAE92451E0F75EA0021DEF6 /* ImageViewController.swift */,
 				6D02ECF41E0EC7A300648A0A /* Main.storyboard */,
 				6D02ECF71E0EC7A300648A0A /* Assets.xcassets */,
 				6D02ECF91E0EC7A300648A0A /* LaunchScreen.storyboard */,
@@ -126,6 +135,7 @@
 				6D02ECFB1E0EC7A300648A0A /* LaunchScreen.storyboard in Resources */,
 				6D02ECF81E0EC7A300648A0A /* Assets.xcassets in Resources */,
 				6D02ECF61E0EC7A300648A0A /* Main.storyboard in Resources */,
+				6DAE924C1E0F80610021DEF6 /* Nankai.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D02ECF31E0EC7A300648A0A /* ViewController.swift in Sources */,
+				6DAE92481E0F7A420021DEF6 /* DemoURL.swift in Sources */,
+				6D02ECF31E0EC7A300648A0A /* MenuViewController.swift in Sources */,
+				6DAE92461E0F75EA0021DEF6 /* ImageViewController.swift in Sources */,
 				6D02ECF11E0EC7A300648A0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +299,7 @@
 				6D02ED011E0EC7A300648A0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
