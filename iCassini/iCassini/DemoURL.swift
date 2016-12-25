@@ -9,7 +9,7 @@
 import Foundation
 
 struct DemoURL {
-    
+     
     static let Naikai = NSBundle.mainBundle().URLForResource("Nankai", withExtension: "jpg")
     
     struct CASC {
