@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -99,7 +100,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HhI-O3-0g9">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HhI-O3-0g9">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </scrollView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kaw-Z0-8Y3">
@@ -108,8 +109,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="8m2-X9-QYi" firstAttribute="top" secondItem="HhI-O3-0g9" secondAttribute="bottom" id="Unj-uo-B5J"/>
                             <constraint firstItem="kaw-Z0-8Y3" firstAttribute="centerY" secondItem="F4P-dc-UFc" secondAttribute="centerY" id="YFt-5U-MOY"/>
+                            <constraint firstItem="HhI-O3-0g9" firstAttribute="top" secondItem="Hcn-18-x4e" secondAttribute="bottom" constant="-64" id="eB2-2l-d5B"/>
                             <constraint firstItem="kaw-Z0-8Y3" firstAttribute="centerX" secondItem="F4P-dc-UFc" secondAttribute="centerX" id="fjn-2R-9BS"/>
+                            <constraint firstItem="HhI-O3-0g9" firstAttribute="leading" secondItem="F4P-dc-UFc" secondAttribute="leadingMargin" constant="-20" id="gqt-BD-XWC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HhI-O3-0g9" secondAttribute="trailing" constant="-20" id="mU1-Cz-1T3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="mKx-L3-gQn"/>

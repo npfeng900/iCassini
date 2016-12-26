@@ -16,9 +16,10 @@ class MenuViewController: UIViewController, UISplitViewControllerDelegate {
     }
     // 控制splitView的collapsed
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
-        return true
+        return false
     }
     
+    // prepareForSegue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         var destinantion = segue.destinationViewController as UIViewController

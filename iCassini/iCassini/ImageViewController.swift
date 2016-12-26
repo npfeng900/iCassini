@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageViewController: UIViewController, UIScrollViewDelegate {
+class ImageViewController: UIViewController, UIScrollViewDelegate, UIPopoverControllerDelegate {
     
     //imageURL -> update image
     var imageURL: NSURL? {
@@ -91,11 +91,84 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.addSubview(imageView)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Redeploy", style: .Plain, target: self, action: "redeployFun")
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         if image == nil {
             fetchImage()
         }
+    }
+    
+    func redeployFun(){
+        let alert = UIAlertController(
+            title: "ReDeploy Cassini",
+            message: "Issue commands to Cassini's guidance system",
+            preferredStyle: UIAlertControllerStyle.ActionSheet
+        )
+        
+        alert.addAction(UIAlertAction(
+            title: "Orbit Saturn",
+            style: UIAlertActionStyle.Default,
+            handler: { (action: UIAlertAction) -> Void in
+                self.login()
+            }
+            ))
+        alert.addAction(UIAlertAction(
+            title: "Explore Titan",
+            style: UIAlertActionStyle.Default,
+            handler: { (action: UIAlertAction) -> Void in
+               self.login()
+            }
+            ))
+        alert.addAction(UIAlertAction(
+            title: "Closeup of Sun",
+            style: UIAlertActionStyle.Destructive,
+            handler: { (action: UIAlertAction) -> Void in
+                self.login()
+            }
+            ))
+       
+        //ipad的特殊情况
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            alert.modalPresentationStyle = .Popover
+            let ppc = alert.popoverPresentationController
+            ppc?.barButtonItem = self.navigationItem.rightBarButtonItem
+        }
+        else {
+            alert.addAction(UIAlertAction(
+                title: "Cancel",
+                style: UIAlertActionStyle.Cancel,
+                handler: nil
+                ))
+        }
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func login() {
+        let loginAlert = UIAlertController(
+            title: "Login Required",
+            message: "Please enter your Cassini guidance sysetem password",
+            preferredStyle: UIAlertControllerStyle.Alert
+        )
+        loginAlert.addAction(UIAlertAction(
+            title: "Cancel",
+            style: .Cancel,
+            handler: nil
+            ))
+        loginAlert.addAction(UIAlertAction(
+            title: "Login",
+            style: .Default,
+            handler: { (UIAlertAction) -> Void in
+                if let tf = loginAlert.textFields?.first {
+                    print(tf.text!)
+                }
+            }
+            ))
+        loginAlert.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "Guidance System Password"
+        }
+        presentViewController(loginAlert, animated: true, completion: nil)
     }
  }
