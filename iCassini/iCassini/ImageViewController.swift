@@ -90,6 +90,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate, UIPopoverCont
     /** View Controll life cycle*/
     override func viewDidLoad() {
         super.viewDidLoad()
+        //scrollView.scrollEnabled = false
         scrollView.addSubview(imageView)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Redeploy", style: .Plain, target: self, action: "redeployFun")
     }

@@ -8,16 +8,19 @@
 
 import UIKit
 
-class MenuViewController: UIViewController, UISplitViewControllerDelegate {
+class MenuViewController: UIViewController {//, UISplitViewControllerDelegate {
    
+    //🏆加了UISplitViewControllerDelegate之后，MasterView滑不出来，所以最好加在别处
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.splitViewController!.delegate = self
+        //self.splitViewController!.delegate = self
     }
     // 控制splitView的collapsed
+    /*
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
         return false
-    }
+    }*/
     
     // prepareForSegue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
